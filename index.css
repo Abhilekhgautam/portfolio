@@ -2,7 +2,6 @@
     font-size: 30px;
     font-family: 'Varela Round', sans-serif;
 }
-
 .nav-item-container a{
     font-size: 23px;
 }
@@ -63,19 +62,6 @@ li{
     max-height: 100vh;
   } */
 
-.swiper {
-    max-width: 70%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    max-height: 100vh;
-}
-.swiper-slide{
-    max-width: 70% !important;
-}
-
   @keyframes wave-animation {
       0% { transform: rotate( 0.0deg) }
      10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
@@ -109,8 +95,3 @@ li{
     }
 }
 
-
-/* For Contact Form*/
-.form-container{
-    padding: 5px;
-}
