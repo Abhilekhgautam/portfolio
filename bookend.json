@@ -1,0 +1,21 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": ["email"],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More Information:"
+    },
+
+    {
+      "type": "small",
+      "title": "See More Projects on GitHub",
+      "url": "https://github.com/abhilekhgautam",
+      "image": "assets/github-icon.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "Feel free to reach out via email: abhilekh@abhilekhgautam.com.np"
+    }
+  ]
+}

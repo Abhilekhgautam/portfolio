@@ -1,0 +1,603 @@
+<!doctype html>
+<html ⚡ lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Abhilekh Gautam - Portfolio</title>
+        <link rel="canonical" href="index.html" />
+        <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,initial-scale=1"
+        />
+        <meta
+            name="description"
+            content="Abhilekh Gautam is a Computer Engineer with interest in Compilers and System Programming."
+        />
+        <link rel="icon" type="image/jpeg" href="/assets/abhilekh.jpeg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            }
+            @-webkit-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-moz-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-ms-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @-o-keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+            @keyframes -amp-start {
+                from {
+                    visibility: hidden;
+                }
+                to {
+                    visibility: visible;
+                }
+            }
+        </style>
+        <noscript
+            ><style amp-boilerplate>
+                body {
+                    -webkit-animation: none;
+                    -moz-animation: none;
+                    -ms-animation: none;
+                    animation: none;
+                }
+            </style></noscript
+        >
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script
+            async
+            custom-element="amp-story"
+            src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
+        ></script>
+        <script
+            async
+            custom-element="amp-audio"
+            src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"
+        ></script>
+        <script
+            async
+            custom-element="amp-video"
+            src="https://cdn.ampproject.org/v0/amp-video-0.1.js"
+        ></script>
+        <script
+            async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+        ></script>
+        <style amp-custom>
+            body {
+                font-family: "Lato", sans-serif;
+                font-weight: 400;
+            }
+            amp-story-page {
+                background-color: #1a1a1d;
+            }
+            h1,
+            h2 {
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                color: #f5f5f5;
+                padding: 0 25px;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+                margin-bottom: 10px;
+            }
+            h1 {
+                font-size: 2.6em;
+                font-weight: 700;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            p,
+            li {
+                color: #e0e0e0;
+                padding: 0 25px;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+                font-size: 1.1em;
+                line-height: 1.6;
+            }
+            .title-card h1 {
+                text-align: center;
+            }
+            .title-card h2 {
+                text-align: center;
+                font-size: 1.4em;
+                font-weight: 400;
+                color: #ccc;
+            }
+            .center-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+            }
+            .project-link a,
+            amp-story-cta-layer a {
+                color: #f0f0f0;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            amp-story-cta-layer a {
+                display: block;
+            }
+            amp-story-cta-layer button {
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                background-color: #e91e63;
+                color: #111;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+            #skills ul {
+                list-style: none;
+                padding-left: 25px;
+                margin-top: 15px;
+            }
+            #skills li {
+                margin-bottom: 8px;
+                padding-left: 0;
+                font-size: 1em;
+            }
+            #skills li::before {
+                content: "> ";
+                color: #f0f0f0;
+                margin-right: 5px;
+            }
+            amp-story-grid-layer[template="fill"] amp-img,
+            amp-story-grid-layer[template="fill"] amp-video {
+                object-fit: cover;
+            }
+            /* Style for Project Description text */
+            .project-desc p {
+                font-size: 1em;
+                line-height: 1.5;
+                margin-top: 15px;
+            }
+            /* ===== Animation Definitions  */
+
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes slide-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes scale-up {
+                from {
+                    opacity: 0.8;
+                    transform: scale(0.95);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            /* Animation Starting States ===== */
+
+            .animated-fade-in {
+                opacity: 0; /* Start hidden */
+                /* Set initial transform if needed for the 'from' state */
+                transform: translateY(10px);
+            }
+
+            .animated-slide-up {
+                opacity: 0; /* Start hidden */
+                transform: translateY(30px); /* Start offset */
+            }
+
+            .animated-scale-up {
+                opacity: 0.8; /* Start slightly transparent */
+                transform: scale(0.95); /* Start slightly smaller */
+            }
+
+            .delay-4 {
+                animation-delay: 4ms;
+            }
+
+            .delay-8 {
+                animation-delay: 8ms;
+            }
+
+            /* Trigger Animations Only on Active Page ===== */
+
+            amp-story-page[active] .animated-fade-in {
+                animation: fade-in 0.8s ease-out forwards;
+                /* Optional: Reset transform here if you didn't set it above */
+                /* transform: translateY(10px); */
+            }
+
+            amp-story-page[active] .animated-slide-up {
+                animation: slide-up 0.6s ease-out forwards;
+                /* transform: translateY(30px); */
+            }
+
+            amp-story-page[active] .animated-scale-up {
+                animation: scale-up 0.5s ease-out forwards;
+                /* transform: scale(0.95); */
+                /* opacity: 0.8; */ /* Ensure starting opacity is considered */
+            }
+            /* ===== Styling for Contact Page Links ===== */
+            amp-story-page#contact .project-link {
+                margin-bottom: 18px; /* Increase spacing between links */
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            amp-story-page#contact .project-link a {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 1px solid #c0c0c0;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.1);
+                transition:
+                    background-color 0.3s ease,
+                    border-color 0.3s ease;
+                font-size: 1.1em;
+                line-height: 1.4;
+                text-decoration: none;
+                color: #f0f0f0;
+                font-weight: 700;
+                min-width: 150px;
+                text-align: center;
+            }
+
+            amp-story-page#contact .project-link a:hover,
+            amp-story-page#contact .project-link a:focus {
+                background-color: rgba(
+                    233,
+                    30,
+                    99,
+                    0.4
+                ); /* Use theme color on hover/focus */
+                border-color: #e91e63; /* Highlight border */
+            }
+        </style>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Abhilekh Gautam",
+                "url": "abhilekhgautam.com.np",
+                "jobTitle": "Compiler Researcher & Engineer",
+                "image": "assets/abhilekh.jpeg",
+                "sameAs": [
+                    "https://linkedin.com/in/abhilekhgautam",
+                    "https://github.com/abhilekhgautam"
+                ],
+                "knowsAbout": [
+                    "Compiler Design",
+                    "Programming Language Implementation",
+                    "LLVM",
+                    "C++",
+                    "Systems Programming",
+                    "Go",
+                    "Rust"
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <amp-story
+            standalone
+            title="Abhilekh Gautam - Compiler Research Portfolio"
+            publisher="Abhilekh Gautam"
+            publisher-logo-src="assets/abhilekh.jpeg"
+            poster-portrait-src="assets/abhilekh.jpeg"
+        >
+            <amp-story-page
+                id="cover"
+                background-audio="assets/audio/bgm-stab.wav"
+            >
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Abhilekh Gautam - Cover Image"
+                        src="assets/abhilekh.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    ></amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    class="center-content title-card"
+                >
+                    <h1 class="animated-scale-up">Abhilekh Gautam</h1>
+                    <h2 class="animated-slide-up delay-8">
+                        Compiler Researcher & Engineer
+                    </h2>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page
+                id="intro"
+                background-audio="assets/audio/bgm-cover.wav"
+            >
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Abstract flowing particles background"
+                        src="assets/intro-bg.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    >
+                    </amp-img>
+                    <!-- Overlay-->
+                    <div
+                        style="
+                            background-color: rgba(0, 0, 0, 0.7);
+                            width: 100%;
+                            height: 100%;
+                        "
+                    ></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    class="center-content"
+                >
+                    <h2 class="animated-fade-in">Focus & Interests</h2>
+                    <p class="animated-slide-up delay-4">
+                        Passionate about Compilers & Programming Language
+                        Implementation. Seeking research opportunities in the
+                        field.
+                    </p>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="project-stab">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Dark hexagon pattern background"
+                        src="assets/bg-stab.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    >
+                    </amp-img>
+                    <div
+                        style="
+                            background-color: rgba(0, 0, 0, 0.7);
+                            width: 100%;
+                            height: 100%;
+                        "
+                    ></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    class="center-content project-desc"
+                >
+                    <h2 class="animated-fade-in">Project: StAb</h2>
+                    <p class="animated-slide-up">
+                        Developing StAb, a programming language designed
+                        specifically as a teaching resource for university
+                        students in Nepal.
+                    </p>
+                </amp-story-grid-layer>
+                <amp-story-page-outlink layout="nodisplay">
+                    <a
+                        href="https://github.com/abhilekhgautam/StAb"
+                        target="_blank"
+                    >
+                        View StAb
+                    </a>
+                </amp-story-page-outlink>
+            </amp-story-page>
+
+            <amp-story-page id="project-wats">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Dark hexagon pattern background"
+                        src="assets/wats-bg.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    >
+                    </amp-img>
+                    <div
+                        style="
+                            background-color: rgba(0, 0, 0, 0.7);
+                            width: 100%;
+                            height: 100%;
+                        "
+                    ></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    class="center-content project-desc"
+                >
+                    <h2 class="animated-slide-in delay-8">Project: Wats</h2>
+                    <p class="animated-scale-up delay 8">
+                        Building the Wats programming language, focusing on
+                        research and implementation of clearer, more
+                        user-friendly compiler error reporting.
+                    </p>
+                </amp-story-grid-layer>
+                <amp-story-page-outlink layout="nodisplay">
+                    <a
+                        href="https://github.com/abhilekhgautam/wats"
+                        target="_blank"
+                    >
+                        View Wats Project
+                    </a>
+                </amp-story-page-outlink>
+            </amp-story-page>
+
+            <amp-story-page id="skills">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Abstract network technology background"
+                        src="assets/intro-bg.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    >
+                    </amp-img>
+                    <div
+                        style="
+                            background-color: rgba(0, 0, 0, 0.7);
+                            width: 100%;
+                            height: 100%;
+                        "
+                    ></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    style="justify-content: center"
+                >
+                    <h2 class="animated-fade-in">Skills</h2>
+                    <ul class="animated-slide-in delay-8">
+                        <li>Compiler Design & Theory</li>
+                        <li>LLVM</li>
+                        <li>C++</li>
+                        <li>Systems Programming</li>
+                        <li>Go</li>
+                        <li>Rust</li>
+                    </ul>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-story-page id="contact">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        alt="Blurred professional background"
+                        src="assets/bg-stab.jpeg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                    >
+                    </amp-img>
+                    <div
+                        style="
+                            background-color: rgba(0, 0, 0, 0.7);
+                            width: 100%;
+                            height: 100%;
+                        "
+                    ></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer
+                    template="vertical"
+                    class="center-content"
+                >
+                    <h2 class="animated-scale-up">Let's Connect!</h2>
+
+                    <p
+                        class="project-link animated-slide-up"
+                        style="animation-delay: 0.2s"
+                    >
+                        <a href="mailto:abhilekh@abhilekhgautam.com.np"
+                            >Email Me</a
+                        >
+                    </p>
+                    <p
+                        class="project-link animated-slide-up"
+                        style="animation-delay: 0.4s"
+                    >
+                        <a
+                            href="https://linkedin.com/in/abhilekhgautam"
+                            target="_blank"
+                            >LinkedIn</a
+                        >
+                    </p>
+                    <p
+                        class="project-link animated-slide-up"
+                        style="animation-delay: 0.6s"
+                    >
+                        <a
+                            href="https://github.com/abhilekhgautam"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                    </p>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <amp-analytics type="googleanalytics">
+                <script type="application/json">
+                    {
+                        "vars": {
+                            "account": "G-EX7NB94H3P"
+                        },
+                        "triggers": {
+                            "storyPageVisible": {
+                                "on": "storyPageVisible",
+                                "request": "pageview",
+                                "vars": {
+                                    "event_name": "page_view",
+                                    "page_path": "${storyPagePath}"
+                                }
+                            },
+                            "storyBookendVisible": {
+                                "on": "storyBookendEnter",
+                                "request": "event",
+                                "vars": {
+                                    "event_name": "story_bookend_view"
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </amp-analytics>
+
+            <amp-story-bookend
+                src="bookend.json"
+                layout="nodisplay"
+            ></amp-story-bookend>
+        </amp-story>
+    </body>
+</html>
