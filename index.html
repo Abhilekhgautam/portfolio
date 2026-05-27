@@ -1,385 +1,484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhilekh Gautam | Systems Engineer</title>
-    <meta name="description" content="Abhilekh Gautam - C++ Systems Engineer & Aspiring Compiler Researcher.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abhilekh Gautam | Systems Engineer</title>
+        <meta
+            name="description"
+            content="Abhilekh Gautam - C++ Systems Engineer & Aspiring Compiler Researcher."
+        />
 
-    <style>
-        :root {
-            /* Theme: Deep Carbon & Syntax Blue */
-            --bg: #0a0a0a;
-            --surface: #111111;
-            --surface-highlight: #1a1a1a;
-            --border: #2a2a2a;
-            
-            --text-main: #e5e5e5;
-            --text-muted: #808080;
-            
-            /* Accents */
-            --accent: #569CD6; /* VS Code Blue */
-            --keyword: #C586C0; /* Purple */
-            --string: #CE9178; /* Orange */
-            --function: #DCDCAA; /* Yellow */
-            
-            --font-main: 'Inter', sans-serif;
-            --font-code: 'JetBrains Mono', monospace;
-        }
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        <style>
+            :root {
+                /* Theme: Deep Carbon & Syntax Blue */
+                --bg: #0a0a0a;
+                --surface: #111111;
+                --surface-highlight: #1a1a1a;
+                --border: #2a2a2a;
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: var(--font-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+                --text-main: #e5e5e5;
+                --text-muted: #808080;
 
-        /* Subtle Grid Background */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(var(--border) 1px, transparent 1px),
-                linear-gradient(90deg, var(--border) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.1;
-            z-index: -1;
-            pointer-events: none;
-        }
+                /* Accents */
+                --accent: #569cd6; /* VS Code Blue */
+                --keyword: #c586c0; /* Purple */
+                --string: #ce9178; /* Orange */
+                --function: #dcdcaa; /* Yellow */
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+                --font-main: "Inter", sans-serif;
+                --font-code: "JetBrains Mono", monospace;
+            }
 
-        /* Typography */
-        h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
-        a { text-decoration: none; color: inherit; transition: 0.2s; }
-        .mono { font-family: var(--font-code); }
-        .text-accent { color: var(--accent); }
-        .text-keyword { color: var(--keyword); }
-        .text-muted { color: var(--text-muted); }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        /* Navigation */
-        nav {
-            padding: 25px 0;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 50px;
-        }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; font-weight: 700; }
+            body {
+                background-color: var(--bg);
+                color: var(--text-main);
+                font-family: var(--font-main);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
 
-        /* Hero Section */
-        .hero { margin-bottom: 60px; }
-        
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 1.1;
-            margin-bottom: 10px;
-        }
-        
-        .role-line {
-            font-family: var(--font-code);
-            color: var(--accent);
-            margin-bottom: 30px;
-            font-size: 1rem;
-            display: inline-block;
-            background: rgba(86, 156, 214, 0.1);
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
+            /* Subtle Grid Background */
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image:
+                    linear-gradient(var(--border) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+                background-size: 50px 50px;
+                opacity: 0.1;
+                z-index: -1;
+                pointer-events: none;
+            }
 
-        /* CONTACT HEADER */
-        .contact-bar {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
+            .container {
+                max-width: 850px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
 
-        .contact-chip {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-family: var(--font-code);
-            color: var(--text-main);
-        }
+            /* Typography */
+            h1,
+            h2,
+            h3 {
+                font-weight: 700;
+                letter-spacing: -0.02em;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                transition: 0.2s;
+            }
+            .mono {
+                font-family: var(--font-code);
+            }
+            .text-accent {
+                color: var(--accent);
+            }
+            .text-keyword {
+                color: var(--keyword);
+            }
+            .text-muted {
+                color: var(--text-muted);
+            }
 
-        .contact-chip:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
+            /* Navigation */
+            nav {
+                padding: 25px 0;
+                border-bottom: 1px solid var(--border);
+                margin-bottom: 50px;
+            }
+            .nav-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
 
-        /* BIO GRID (Replacing Paragraphs) */
-        .bio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
+            /* Hero Section */
+            .hero {
+                margin-bottom: 60px;
+            }
 
-        .bio-item {
-            border-left: 2px solid var(--border);
-            padding-left: 15px;
-            transition: border-color 0.3s ease;
-        }
+            .hero h1 {
+                font-size: 3rem;
+                line-height: 1.1;
+                margin-bottom: 10px;
+            }
 
-        .bio-item:hover {
-            border-left-color: var(--accent);
-        }
+            .role-line {
+                font-family: var(--font-code);
+                color: var(--accent);
+                margin-bottom: 30px;
+                font-size: 1rem;
+                display: inline-block;
+                background: rgba(86, 156, 214, 0.1);
+                padding: 5px 10px;
+                border-radius: 4px;
+            }
 
-        .bio-label {
-            display: block;
-            font-family: var(--font-code);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+            /* CONTACT HEADER */
+            .contact-bar {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+            }
 
-        .bio-text {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            line-height: 1.5;
-        }
+            .contact-chip {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-size: 0.9rem;
+                font-family: var(--font-code);
+                color: var(--text-main);
+            }
 
-        /* Sections */
-        section { margin-bottom: 70px; }
+            .contact-chip:hover {
+                border-color: var(--accent);
+                color: var(--accent);
+                transform: translateY(-2px);
+            }
 
-        /* Stylish Subheadings */
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border);
-        }
+            /* BIO GRID (Replacing Paragraphs) */
+            .bio-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
 
-        .section-header h2 {
-            font-family: var(--font-code);
-            font-size: 1.2rem;
-            color: var(--text-main);
-        }
+            .bio-item {
+                border-left: 2px solid var(--border);
+                padding-left: 15px;
+                transition: border-color 0.3s ease;
+            }
 
-        .section-header .prefix { color: var(--text-muted); }
-        .section-header .scope { color: var(--accent); }
+            .bio-item:hover {
+                border-left-color: var(--accent);
+            }
 
-        /* Projects Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+            .bio-label {
+                display: block;
+                font-family: var(--font-code);
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                margin-bottom: 8px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            padding: 25px;
-            border-radius: 6px;
-            transition: border-color 0.2s;
-            position: relative;
-        }
+            .bio-text {
+                font-size: 0.95rem;
+                color: var(--text-main);
+                line-height: 1.5;
+            }
 
-        .card:hover { border-color: var(--accent); }
+            /* Sections */
+            section {
+                margin-bottom: 70px;
+            }
 
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
+            /* Stylish Subheadings */
+            .section-header {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 25px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid var(--border);
+            }
 
-        .card h3 { font-size: 1.2rem; }
-        
-        .card-type {
-            font-family: var(--font-code);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-            padding: 2px 6px;
-            border-radius: 3px;
-        }
+            .section-header h2 {
+                font-family: var(--font-code);
+                font-size: 1.2rem;
+                color: var(--text-main);
+            }
 
-        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
+            .section-header .prefix {
+                color: var(--text-muted);
+            }
+            .section-header .scope {
+                color: var(--accent);
+            }
 
-        .tech-stack { font-family: var(--font-code); font-size: 0.8rem; color: var(--keyword); }
+            /* Projects Grid */
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
-        /* Skills (Compact List) */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-group h4 {
-            color: var(--text-main);
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-            color: var(--text-muted);
-            font-family: var(--font-code);
-            font-size: 0.9rem;
-        }
-        
-        .skill-list li { margin-bottom: 5px; }
-        .skill-list li::before { content: ">> "; color: var(--border); margin-right: 5px; }
+            .card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 25px;
+                border-radius: 6px;
+                transition: border-color 0.2s;
+                position: relative;
+            }
 
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: 1fr 1fr; }
-        }
-    </style>
-</head>
-<body>
+            .card:hover {
+                border-color: var(--accent);
+            }
 
-    <nav>
-        <div class="container nav-inner">
-            <div class="logo mono">
-		    <span class="text-keyword">::</span> <span class="text-main">Abhilekh Gautam</span> <span class="text-keyword">::</span>
+            .card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 12px;
+            }
+
+            .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .card-type {
+                font-family: var(--font-code);
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--text-muted);
+                border: 1px solid var(--border);
+                padding: 2px 6px;
+                border-radius: 3px;
+            }
+
+            .card p {
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+
+            .tech-stack {
+                font-family: var(--font-code);
+                font-size: 0.8rem;
+                color: var(--keyword);
+            }
+
+            /* Skills (Compact List) */
+            .skills-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .skill-group h4 {
+                color: var(--text-main);
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
+
+            .skill-list {
+                list-style: none;
+                color: var(--text-muted);
+                font-family: var(--font-code);
+                font-size: 0.9rem;
+            }
+
+            .skill-list li {
+                margin-bottom: 5px;
+            }
+            .skill-list li::before {
+                content: ">> ";
+                color: var(--border);
+                margin-right: 5px;
+            }
+
+            @media (min-width: 768px) {
+                .grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <div class="logo mono">
+                    <span class="text-keyword">::</span>
+                    <span class="text-main">Abhilekh Gautam</span>
+                    <span class="text-keyword">::</span>
+                </div>
+                <!-- Minimal indicator -->
+                <div
+                    class="mono"
+                    style="font-size: 0.6rem; color: var(--accent)"
+                >
+                </div>
             </div>
-            <!-- Minimal indicator -->
-            <div class="mono" style="font-size: 0.6rem; color: var(--accent);">
-                <a href="updates.html">View My Thoughts</a>
-            </div>
+        </nav>
+
+        <div class="container">
+            <!-- HERO SECTION -->
+            <header class="hero">
+                <h1>Abhilekh Gautam</h1>
+                <div class="role-line">C++ Systems Engineer</div>
+
+                <!-- CONTACT DETAILS -->
+                <div class="contact-bar">
+                    <a
+                        href="mailto:abhilekh@abhilekhgautam.com.np"
+                        class="contact-chip"
+                    >
+                        <span>@</span> Email
+                    </a>
+                    <a
+                        href="https://github.com/abhilekhgautam"
+                        target="_blank"
+                        class="contact-chip"
+                    >
+                        <svg
+                            height="16"
+                            width="16"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                            ></path>
+                        </svg>
+                        GitHub
+                    </a>
+                                    </div>
+
+                <div class="bio-grid">
+                    <div class="bio-item">
+                        <span class="bio-label">Professionally</span>
+                        <span class="bio-text">
+                            Building security systems in C++.
+                        </span>
+                    </div>
+                    <div class="bio-item">
+                        <span class="bio-label">Research Interest</span>
+                        <span class="bio-text">
+                            <span>Programming Languages</span>,
+                            <span>Compilers</span>
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PROJECTS -->
+            <section>
+                <div class="section-header">
+                    <span class="prefix">01.</span>
+                    <h2>Projects</h2>
+                </div>
+
+                <div class="grid">
+                    <!-- Project 1 -->
+                    <a
+                        href="https://github.com/abhilekhgautam/StAb"
+                        target="_blank"
+                        class="card"
+                    >
+                        <div class="card-top">
+                            <h3>StAb</h3>
+                            <span class="card-type">Project</span>
+                        </div>
+                        <p>
+                            Designed a strictly typed programming language to
+                            simplify university-level CS education in Nepal.
+                        </p>
+                        <div class="tech-stack">{ "C++", "LLVM"}</div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a
+                        href="https://github.com/abhilekhgautam/wats"
+                        target="_blank"
+                        class="card"
+                    >
+                        <div class="card-top">
+                            <h3>Wats</h3>
+                            <span class="card-type">Project</span>
+                        </div>
+                        <p>
+                            Investigating user-centric compiler error reporting.
+                            Parsing and diagnostics designed for human
+                            readability.
+                        </p>
+                        <div class="tech-stack">{ "C++", "Bril"}</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section>
+                <div class="section-header">
+                    <span class="prefix">02.</span>
+                    <h2>Languages/Tools</h2>
+                </div>
+
+                <div class="card">
+                    <div class="skills-container">
+                        <div class="skill-group">
+                            <h4>Languages</h4>
+                            <ul class="skill-list">
+                                <li>C++</li>
+                                <li>Rust</li>
+                                <li>Go</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Compiler Eng</h4>
+                            <ul class="skill-list">
+                                <li>LLVM</li>
+                                <li>MLIR</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </nav>
 
-    <div class="container">
-        
-        <!-- HERO SECTION -->
-        <header class="hero">
-            <h1>Abhilekh Gautam</h1>
-            <div class="role-line">
-                C++ Systems Engineer
-            </div>
-            
-            <!-- CONTACT DETAILS -->
-            <div class="contact-bar">
-                <a href="mailto:abhilekh@abhilekhgautam.com.np" class="contact-chip">
-                    <span>@</span> Email
-                </a>
-                <a href="https://github.com/abhilekhgautam" target="_blank" class="contact-chip">
-                    <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/abhilekhgautam" target="_blank" class="contact-chip">
-                    LinkedIn
-                </a>
-            </div>
+        <footer
+            style="
+                margin-top: 80px;
+                padding: 40px 0;
+                border-top: 1px solid var(--border);
+                text-align: center;
+            "
+        >
+            <p class="mono text-muted" style="font-size: 0.85rem">
+                &copy; 2026 Abhilekh Gautam
+                <br />
+                <span
+                    style="display: inline-block; margin-top: 8px; opacity: 0.6"
+                >
+                    Shamelessly vibe coded with
+                    <span class="text-accent">Gemini</span>
+                </span>
+            </p>
+        </footer>
 
-            <div class="bio-grid">
-                <div class="bio-item">
-                    <span class="bio-label">Professionally</span>
-                    <span class="bio-text">
-                        Building security systems in C++.
-                    </span>
-                </div>
-                <div class="bio-item">
-                    <span class="bio-label">Research Interest</span>
-                    <span class="bio-text">
-			    <span >Programming Languages</span>, <span>Compilers</span>
-                    </span>
-                </div>
-            </div>
-        </header>
-
-        <!-- PROJECTS -->
-        <section>
-            <div class="section-header">
-                <span class="prefix">01.</span>
-                <h2>Projects</h2>
-            </div>
-            
-            <div class="grid">
-                <!-- Project 1 -->
-                <a href="https://github.com/abhilekhgautam/StAb" target="_blank" class="card">
-                    <div class="card-top">
-                        <h3>StAb</h3>
-                        <span class="card-type">Project</span>
-                    </div>
-                    <p>Designed a strictly typed programming language to simplify university-level CS education in Nepal.</p>
-                    <div class="tech-stack">
-                        { "C++", "LLVM"}
-                    </div>
-                </a>
-
-                <!-- Project 2 -->
-                <a href="https://github.com/abhilekhgautam/wats" target="_blank" class="card">
-                    <div class="card-top">
-                        <h3>Wats</h3>
-                        <span class="card-type">Project</span>
-                    </div>
-                    <p>Investigating user-centric compiler error reporting. Parsing and diagnostics designed for human readability.</p>
-                    <div class="tech-stack">
-                        { "C++", "Bril"}
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section>
-            <div class="section-header">
-                <span class="prefix">02.</span>
-                <h2>Languages/Tools</h2>
-            </div>
-            
-            <div class="card">
-                <div class="skills-container">
-                    <div class="skill-group">
-                        <h4>Languages</h4>
-                        <ul class="skill-list">
-                            <li>C++</li>
-                            <li>Rust</li>
-                            <li>Go</li>
-                        </ul>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Compiler Eng</h4>
-                        <ul class="skill-list">
-                            <li>LLVM</li>
-                            <li>MLIR</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
- <footer style="margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); text-align: center;">
-        <p class="mono text-muted" style="font-size: 0.85rem;">
-            &copy; 2026 Abhilekh Gautam
-            <br>
-            <span style="display: inline-block; margin-top: 8px; opacity: 0.6;">
-                Shamelessly vibe coded with <span class="text-accent">Gemini</span>
-            </span>
-        </p>
-    </footer>
-
-    <!-- Analytics (Uncomment to enable) -->
-    <!-- 
+        <!-- Analytics (Uncomment to enable) -->
+        <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX7NB94H3P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -387,6 +486,5 @@
         gtag('js', new Date());
         gtag('config', 'G-EX7NB94H3P');
     </script>
-    -->
-</body>
+    --></body>
 </html>
